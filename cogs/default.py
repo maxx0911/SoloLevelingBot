@@ -21,7 +21,7 @@ class Default(commands.Cog):
             description=":heart: Heartbeat ACK: {0}ms\n:timer: Discord-Bot latency: {1}ms".format(
                 ping_ms, real_ping
             ),
-            color=self.bot.color
+            color=self.bot.color,
         )
         ping_embed.set_footer(text=str(datetime.now()))
         await ctx.send(embed=ping_embed)
