@@ -20,7 +20,7 @@ class Errors(commands.Cog):
                 "You are on cooldown! Try again in {0}.\n".format(time)
             )
         elif isinstance(
-                error, (commands.errors.UserInputError, commands.errors.BadUnionArgument)
+            error, (commands.errors.UserInputError, commands.errors.BadUnionArgument)
         ):
             return await ctx.send(
                 "Looks like some of your input was incorrect... Check"

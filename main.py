@@ -1,6 +1,5 @@
 import asyncio
 import os
-
 from datetime import datetime
 
 if "config.py" not in os.listdir():
@@ -11,10 +10,10 @@ if "config.py" not in os.listdir():
     )
     exit(1)
 
-import config
-
-from discord.ext import commands
 import asyncpg
+from discord.ext import commands
+
+import config
 
 
 async def run():
@@ -34,6 +33,6 @@ async def run():
 
     await bot.start(config.auth_token)
 
+
 loop = asyncio.get_event_loop()
 loop.run_until_complete(run())
-
